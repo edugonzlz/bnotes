@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import "AGTSimpleCoreDataStack.h"
 
 @interface AppDelegate ()
 
@@ -16,7 +17,39 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
+    
+    self.model = [AGTSimpleCoreDataStack coreDataStackWithModelName:@"Model"];
+    
+    [self trastearConDatos];
+    
+    [self autoSave];
+    
+    //self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+    
+    //NSFetchRequest *rq = [NSFetchRequest fetchRequestWithEntityName:[EGGNotebook entityName]];//mogenerator ha creado el metodo de clase entityName
+    //Ordenamos la busqueda
+//    rq.sortDescriptors = @[[NSSortDescriptor sortDescriptorWithKey:EGGNamedEntityAttributes.modificationDate
+//                                                         ascending:NO],
+//                           //mogenerator ha creado constantes para las propiedades
+//                           [NSSortDescriptor sortDescriptorWithKey:EGGNamedEntityAttributes.name
+//                                                         ascending:YES]];
+//    
+//    NSFetchedResultsController *results = [[NSFetchedResultsController alloc]initWithFetchRequest:rq
+//                                                                             managedObjectContext:self.model.context
+//                                                                               sectionNameKeyPath:nil
+//                                                                                        cacheName:nil];
+//    
+//    
+//    EGGNotebooksViewController *nbVC = [[EGGNotebooksViewController alloc]
+//                                        initWithFetchedResultsController:results
+//                                        style:UITableViewStylePlain];
+//    UINavigationController *navVC = [[UINavigationController alloc]initWithRootViewController:nbVC];
+//    
+//    self.window.rootViewController = navVC;
+//    
+    self.window.backgroundColor = [UIColor whiteColor];
+    [self.window makeKeyAndVisible];
+    
     return YES;
 }
 
@@ -40,6 +73,71 @@
 
 - (void)applicationWillTerminate:(UIApplication *)application {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+}
+
+#pragma Mark Utils
+
+-(void)trastearConDatos{
+    
+    
+    //Creamos una libreta y unas notas
+    
+//    EGGNotebook *nb = [EGGNotebook notebookWithName:@"libreta"
+//                                            context:self.model.context];
+//    EGGNote *note = [EGGNote noteWithName:@"nota1"
+//                                 notebook:nb
+//                                  context:self.model.context];
+//    
+//    EGGNote *note2 = [EGGNote noteWithName:@"nota2"
+//                                  notebook:nb
+//                                   context:self.model.context];
+//    
+//    //Buscar
+//    NSFetchRequest *request = [[NSFetchRequest alloc] initWithEntityName:[EGGNote entityName]];
+//    //Ordenamos los resultados
+//    request.sortDescriptors = @[[NSSortDescriptor sortDescriptorWithKey:EGGNamedEntityAttributes.name
+//                                                              ascending:YES],
+//                                [NSSortDescriptor sortDescriptorWithKey:EGGNamedEntityAttributes.modificationDate
+//                                                              ascending:NO]];
+//    //Crear un limite de busquedad -> request.fetchLimit
+//    
+//    //Ejecutar la busqueda
+//    NSError *error = nil;
+//    NSArray *results = [self.model.context executeFetchRequest:request
+//                                                         error:&error];
+//    
+//    //Ver que nos han devuelto
+//    if (results == nil) {
+//        NSLog(@"error al buscar %@", results);
+//    }else{
+//        NSLog(@"Results %@", results);
+//    }
+//    
+//    //Eliminar
+//    [self.model.copy deleteObject:note];
+    
+}
+
+-(void)save{
+    
+    [self.model saveWithErrorBlock:^(NSError *error) {
+        NSLog(@"Error al guardar %s \n\n %@", __func__,  error);
+    }];
+}
+
+-(void)autoSave{
+    
+//    if (AUTO_SAVE) {
+//        
+//        NSLog(@"Autoguardando");
+//        
+//        [self save];
+//        
+//        [self performSelector:@selector(autoSave)
+//                   withObject:nil
+//                   afterDelay:AUTO_SAVE_DELAY_IN_SECONDS];
+//    
+//    }
 }
 
 @end

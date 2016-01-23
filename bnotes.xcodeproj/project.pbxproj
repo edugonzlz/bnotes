@@ -15,6 +15,14 @@
 		34DAF50C1C50E2FF0046F72C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 34DAF50A1C50E2FF0046F72C /* LaunchScreen.storyboard */; };
 		34DAF5171C50E3000046F72C /* bnotesTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 34DAF5161C50E3000046F72C /* bnotesTests.m */; };
 		34DAF5221C50E3000046F72C /* bnotesUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 34DAF5211C50E3000046F72C /* bnotesUITests.m */; };
+		34DAF5311C50E3240046F72C /* AGTSimpleCoreDataStack.m in Sources */ = {isa = PBXBuildFile; fileRef = 34DAF5301C50E3240046F72C /* AGTSimpleCoreDataStack.m */; };
+		34DAF5351C50E93A0046F72C /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 34DAF5331C50E93A0046F72C /* Model.xcdatamodeld */; };
+		34DAF5421C5138890046F72C /* _EGGNamedEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = 34DAF5371C5138890046F72C /* _EGGNamedEntity.m */; };
+		34DAF5431C5138890046F72C /* _EGGNote.m in Sources */ = {isa = PBXBuildFile; fileRef = 34DAF5391C5138890046F72C /* _EGGNote.m */; };
+		34DAF5441C5138890046F72C /* _EGGNotebook.m in Sources */ = {isa = PBXBuildFile; fileRef = 34DAF53B1C5138890046F72C /* _EGGNotebook.m */; };
+		34DAF5451C5138890046F72C /* EGGNamedEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = 34DAF53D1C5138890046F72C /* EGGNamedEntity.m */; };
+		34DAF5461C5138890046F72C /* EGGNote.m in Sources */ = {isa = PBXBuildFile; fileRef = 34DAF53F1C5138890046F72C /* EGGNote.m */; };
+		34DAF5471C5138890046F72C /* EGGNotebook.m in Sources */ = {isa = PBXBuildFile; fileRef = 34DAF5411C5138890046F72C /* EGGNotebook.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +59,21 @@
 		34DAF51D1C50E3000046F72C /* bnotesUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = bnotesUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		34DAF5211C50E3000046F72C /* bnotesUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = bnotesUITests.m; sourceTree = "<group>"; };
 		34DAF5231C50E3000046F72C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		34DAF52F1C50E3240046F72C /* AGTSimpleCoreDataStack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AGTSimpleCoreDataStack.h; sourceTree = "<group>"; };
+		34DAF5301C50E3240046F72C /* AGTSimpleCoreDataStack.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AGTSimpleCoreDataStack.m; sourceTree = "<group>"; };
+		34DAF5341C50E93A0046F72C /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
+		34DAF5361C5138890046F72C /* _EGGNamedEntity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = _EGGNamedEntity.h; sourceTree = "<group>"; };
+		34DAF5371C5138890046F72C /* _EGGNamedEntity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = _EGGNamedEntity.m; sourceTree = "<group>"; };
+		34DAF5381C5138890046F72C /* _EGGNote.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = _EGGNote.h; sourceTree = "<group>"; };
+		34DAF5391C5138890046F72C /* _EGGNote.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = _EGGNote.m; sourceTree = "<group>"; };
+		34DAF53A1C5138890046F72C /* _EGGNotebook.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = _EGGNotebook.h; sourceTree = "<group>"; };
+		34DAF53B1C5138890046F72C /* _EGGNotebook.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = _EGGNotebook.m; sourceTree = "<group>"; };
+		34DAF53C1C5138890046F72C /* EGGNamedEntity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EGGNamedEntity.h; sourceTree = "<group>"; };
+		34DAF53D1C5138890046F72C /* EGGNamedEntity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EGGNamedEntity.m; sourceTree = "<group>"; };
+		34DAF53E1C5138890046F72C /* EGGNote.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EGGNote.h; sourceTree = "<group>"; };
+		34DAF53F1C5138890046F72C /* EGGNote.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EGGNote.m; sourceTree = "<group>"; };
+		34DAF5401C5138890046F72C /* EGGNotebook.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EGGNotebook.h; sourceTree = "<group>"; };
+		34DAF5411C5138890046F72C /* EGGNotebook.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EGGNotebook.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +124,7 @@
 		34DAF4FB1C50E2FF0046F72C /* bnotes */ = {
 			isa = PBXGroup;
 			children = (
+				34DAF5321C50E32A0046F72C /* Models */,
 				34DAF4FF1C50E2FF0046F72C /* AppDelegate.h */,
 				34DAF5001C50E2FF0046F72C /* AppDelegate.m */,
 				34DAF5021C50E2FF0046F72C /* ViewController.h */,
@@ -138,6 +162,28 @@
 				34DAF5231C50E3000046F72C /* Info.plist */,
 			);
 			path = bnotesUITests;
+			sourceTree = "<group>";
+		};
+		34DAF5321C50E32A0046F72C /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				34DAF5361C5138890046F72C /* _EGGNamedEntity.h */,
+				34DAF5371C5138890046F72C /* _EGGNamedEntity.m */,
+				34DAF5381C5138890046F72C /* _EGGNote.h */,
+				34DAF5391C5138890046F72C /* _EGGNote.m */,
+				34DAF53A1C5138890046F72C /* _EGGNotebook.h */,
+				34DAF53B1C5138890046F72C /* _EGGNotebook.m */,
+				34DAF53C1C5138890046F72C /* EGGNamedEntity.h */,
+				34DAF53D1C5138890046F72C /* EGGNamedEntity.m */,
+				34DAF53E1C5138890046F72C /* EGGNote.h */,
+				34DAF53F1C5138890046F72C /* EGGNote.m */,
+				34DAF5401C5138890046F72C /* EGGNotebook.h */,
+				34DAF5411C5138890046F72C /* EGGNotebook.m */,
+				34DAF52F1C50E3240046F72C /* AGTSimpleCoreDataStack.h */,
+				34DAF5301C50E3240046F72C /* AGTSimpleCoreDataStack.m */,
+				34DAF5331C50E93A0046F72C /* Model.xcdatamodeld */,
+			);
+			name = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -272,6 +318,14 @@
 			files = (
 				34DAF5041C50E2FF0046F72C /* ViewController.m in Sources */,
 				34DAF5011C50E2FF0046F72C /* AppDelegate.m in Sources */,
+				34DAF5471C5138890046F72C /* EGGNotebook.m in Sources */,
+				34DAF5451C5138890046F72C /* EGGNamedEntity.m in Sources */,
+				34DAF5351C50E93A0046F72C /* Model.xcdatamodeld in Sources */,
+				34DAF5431C5138890046F72C /* _EGGNote.m in Sources */,
+				34DAF5441C5138890046F72C /* _EGGNotebook.m in Sources */,
+				34DAF5311C50E3240046F72C /* AGTSimpleCoreDataStack.m in Sources */,
+				34DAF5461C5138890046F72C /* EGGNote.m in Sources */,
+				34DAF5421C5138890046F72C /* _EGGNamedEntity.m in Sources */,
 				34DAF4FE1C50E2FF0046F72C /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -514,6 +568,19 @@
 			defaultConfigurationIsVisible = 0;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		34DAF5331C50E93A0046F72C /* Model.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				34DAF5341C50E93A0046F72C /* Model.xcdatamodel */,
+			);
+			currentVersion = 34DAF5341C50E93A0046F72C /* Model.xcdatamodel */;
+			path = Model.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 34DAF4F11C50E2FF0046F72C /* Project object */;
 }
