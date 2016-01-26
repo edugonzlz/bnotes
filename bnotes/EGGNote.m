@@ -22,6 +22,7 @@
     
     note.creationDate = [NSDate date];
     note.modificationDate = [NSDate date];
+    note.name = name;
     note.notebook = notebook;
     
     return note;

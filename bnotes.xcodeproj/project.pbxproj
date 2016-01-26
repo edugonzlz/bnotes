@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3419F9DD1C5642E700350021 /* AGTCoreDataTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3419F9DC1C5642E700350021 /* AGTCoreDataTableViewController.m */; };
+		3419F9E21C56434F00350021 /* EGGNotebooksViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3419F9E11C56434F00350021 /* EGGNotebooksViewController.m */; };
+		349F59AB1C53742200157917 /* _EGGPhoto.m in Sources */ = {isa = PBXBuildFile; fileRef = 349F59A81C53742200157917 /* _EGGPhoto.m */; };
+		349F59AC1C53742200157917 /* EGGPhoto.m in Sources */ = {isa = PBXBuildFile; fileRef = 349F59AA1C53742200157917 /* EGGPhoto.m */; };
 		34DAF4FE1C50E2FF0046F72C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 34DAF4FD1C50E2FF0046F72C /* main.m */; };
 		34DAF5011C50E2FF0046F72C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 34DAF5001C50E2FF0046F72C /* AppDelegate.m */; };
 		34DAF5041C50E2FF0046F72C /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 34DAF5031C50E2FF0046F72C /* ViewController.m */; };
@@ -43,6 +47,16 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3419F9D81C5623D400350021 /* Settings.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Settings.h; sourceTree = "<group>"; };
+		3419F9D91C56247B00350021 /* bnotes-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "bnotes-Prefix.pch"; sourceTree = "<group>"; };
+		3419F9DB1C5642E700350021 /* AGTCoreDataTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AGTCoreDataTableViewController.h; sourceTree = "<group>"; };
+		3419F9DC1C5642E700350021 /* AGTCoreDataTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AGTCoreDataTableViewController.m; sourceTree = "<group>"; };
+		3419F9E01C56434F00350021 /* EGGNotebooksViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EGGNotebooksViewController.h; sourceTree = "<group>"; };
+		3419F9E11C56434F00350021 /* EGGNotebooksViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EGGNotebooksViewController.m; sourceTree = "<group>"; };
+		349F59A71C53742200157917 /* _EGGPhoto.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = _EGGPhoto.h; sourceTree = "<group>"; };
+		349F59A81C53742200157917 /* _EGGPhoto.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = _EGGPhoto.m; sourceTree = "<group>"; };
+		349F59A91C53742200157917 /* EGGPhoto.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EGGPhoto.h; sourceTree = "<group>"; };
+		349F59AA1C53742200157917 /* EGGPhoto.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EGGPhoto.m; sourceTree = "<group>"; };
 		34DAF4F91C50E2FF0046F72C /* bnotes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = bnotes.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		34DAF4FD1C50E2FF0046F72C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		34DAF4FF1C50E2FF0046F72C /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -101,6 +115,34 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3419F9DE1C5642ED00350021 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				34DAF5021C50E2FF0046F72C /* ViewController.h */,
+				34DAF5031C50E2FF0046F72C /* ViewController.m */,
+				3419F9DB1C5642E700350021 /* AGTCoreDataTableViewController.h */,
+				3419F9DC1C5642E700350021 /* AGTCoreDataTableViewController.m */,
+				3419F9E01C56434F00350021 /* EGGNotebooksViewController.h */,
+				3419F9E11C56434F00350021 /* EGGNotebooksViewController.m */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		3419F9DF1C5642FD00350021 /* mogenerator Classes */ = {
+			isa = PBXGroup;
+			children = (
+				34DAF5361C5138890046F72C /* _EGGNamedEntity.h */,
+				34DAF5371C5138890046F72C /* _EGGNamedEntity.m */,
+				34DAF53A1C5138890046F72C /* _EGGNotebook.h */,
+				34DAF53B1C5138890046F72C /* _EGGNotebook.m */,
+				349F59A71C53742200157917 /* _EGGPhoto.h */,
+				349F59A81C53742200157917 /* _EGGPhoto.m */,
+				34DAF5381C5138890046F72C /* _EGGNote.h */,
+				34DAF5391C5138890046F72C /* _EGGNote.m */,
+			);
+			name = "mogenerator Classes";
+			sourceTree = "<group>";
+		};
 		34DAF4F01C50E2FF0046F72C = {
 			isa = PBXGroup;
 			children = (
@@ -124,15 +166,13 @@
 		34DAF4FB1C50E2FF0046F72C /* bnotes */ = {
 			isa = PBXGroup;
 			children = (
+				3419F9DE1C5642ED00350021 /* Controllers */,
 				34DAF5321C50E32A0046F72C /* Models */,
 				34DAF4FF1C50E2FF0046F72C /* AppDelegate.h */,
 				34DAF5001C50E2FF0046F72C /* AppDelegate.m */,
-				34DAF5021C50E2FF0046F72C /* ViewController.h */,
-				34DAF5031C50E2FF0046F72C /* ViewController.m */,
 				34DAF5051C50E2FF0046F72C /* Main.storyboard */,
 				34DAF5081C50E2FF0046F72C /* Assets.xcassets */,
 				34DAF50A1C50E2FF0046F72C /* LaunchScreen.storyboard */,
-				34DAF50D1C50E2FF0046F72C /* Info.plist */,
 				34DAF4FC1C50E2FF0046F72C /* Supporting Files */,
 			);
 			path = bnotes;
@@ -141,6 +181,9 @@
 		34DAF4FC1C50E2FF0046F72C /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				34DAF50D1C50E2FF0046F72C /* Info.plist */,
+				3419F9D91C56247B00350021 /* bnotes-Prefix.pch */,
+				3419F9D81C5623D400350021 /* Settings.h */,
 				34DAF4FD1C50E2FF0046F72C /* main.m */,
 			);
 			name = "Supporting Files";
@@ -167,18 +210,15 @@
 		34DAF5321C50E32A0046F72C /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				34DAF5361C5138890046F72C /* _EGGNamedEntity.h */,
-				34DAF5371C5138890046F72C /* _EGGNamedEntity.m */,
-				34DAF5381C5138890046F72C /* _EGGNote.h */,
-				34DAF5391C5138890046F72C /* _EGGNote.m */,
-				34DAF53A1C5138890046F72C /* _EGGNotebook.h */,
-				34DAF53B1C5138890046F72C /* _EGGNotebook.m */,
+				3419F9DF1C5642FD00350021 /* mogenerator Classes */,
 				34DAF53C1C5138890046F72C /* EGGNamedEntity.h */,
 				34DAF53D1C5138890046F72C /* EGGNamedEntity.m */,
-				34DAF53E1C5138890046F72C /* EGGNote.h */,
-				34DAF53F1C5138890046F72C /* EGGNote.m */,
 				34DAF5401C5138890046F72C /* EGGNotebook.h */,
 				34DAF5411C5138890046F72C /* EGGNotebook.m */,
+				34DAF53E1C5138890046F72C /* EGGNote.h */,
+				34DAF53F1C5138890046F72C /* EGGNote.m */,
+				349F59A91C53742200157917 /* EGGPhoto.h */,
+				349F59AA1C53742200157917 /* EGGPhoto.m */,
 				34DAF52F1C50E3240046F72C /* AGTSimpleCoreDataStack.h */,
 				34DAF5301C50E3240046F72C /* AGTSimpleCoreDataStack.m */,
 				34DAF5331C50E93A0046F72C /* Model.xcdatamodeld */,
@@ -318,12 +358,16 @@
 			files = (
 				34DAF5041C50E2FF0046F72C /* ViewController.m in Sources */,
 				34DAF5011C50E2FF0046F72C /* AppDelegate.m in Sources */,
+				3419F9DD1C5642E700350021 /* AGTCoreDataTableViewController.m in Sources */,
+				349F59AB1C53742200157917 /* _EGGPhoto.m in Sources */,
 				34DAF5471C5138890046F72C /* EGGNotebook.m in Sources */,
 				34DAF5451C5138890046F72C /* EGGNamedEntity.m in Sources */,
 				34DAF5351C50E93A0046F72C /* Model.xcdatamodeld in Sources */,
 				34DAF5431C5138890046F72C /* _EGGNote.m in Sources */,
 				34DAF5441C5138890046F72C /* _EGGNotebook.m in Sources */,
+				349F59AC1C53742200157917 /* EGGPhoto.m in Sources */,
 				34DAF5311C50E3240046F72C /* AGTSimpleCoreDataStack.m in Sources */,
+				3419F9E21C56434F00350021 /* EGGNotebooksViewController.m in Sources */,
 				34DAF5461C5138890046F72C /* EGGNote.m in Sources */,
 				34DAF5421C5138890046F72C /* _EGGNamedEntity.m in Sources */,
 				34DAF4FE1C50E2FF0046F72C /* main.m in Sources */,
@@ -407,6 +451,7 @@
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREFIX_HEADER = "bnotes/bnotes-Prefix.pch";
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
@@ -448,6 +493,7 @@
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "bnotes/bnotes-Prefix.pch";
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
 				GCC_WARN_UNDECLARED_SELECTOR = YES;
@@ -550,6 +596,7 @@
 				34DAF5281C50E3000046F72C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		34DAF5291C50E3000046F72C /* Build configuration list for PBXNativeTarget "bnotesTests" */ = {
 			isa = XCConfigurationList;
@@ -558,6 +605,7 @@
 				34DAF52B1C50E3000046F72C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		34DAF52C1C50E3000046F72C /* Build configuration list for PBXNativeTarget "bnotesUITests" */ = {
 			isa = XCConfigurationList;
@@ -566,6 +614,7 @@
 				34DAF52E1C50E3000046F72C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 

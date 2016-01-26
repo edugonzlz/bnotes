@@ -10,9 +10,11 @@ extern const struct EGGNoteAttributes {
 
 extern const struct EGGNoteRelationships {
 	__unsafe_unretained NSString *notebook;
+	__unsafe_unretained NSString *photos;
 } EGGNoteRelationships;
 
 @class EGGNotebook;
+@class EGGPhoto;
 
 @interface EGGNoteID : EGGNamedEntityID {}
 @end
@@ -31,6 +33,18 @@ extern const struct EGGNoteRelationships {
 
 //- (BOOL)validateNotebook:(id*)value_ error:(NSError**)error_;
 
+@property (nonatomic, strong) NSSet *photos;
+
+- (NSMutableSet*)photosSet;
+
+@end
+
+@interface _EGGNote (PhotosCoreDataGeneratedAccessors)
+- (void)addPhotos:(NSSet*)value_;
+- (void)removePhotos:(NSSet*)value_;
+- (void)addPhotosObject:(EGGPhoto*)value_;
+- (void)removePhotosObject:(EGGPhoto*)value_;
+
 @end
 
 @interface _EGGNote (CoreDataGeneratedPrimitiveAccessors)
@@ -40,5 +54,8 @@ extern const struct EGGNoteRelationships {
 
 - (EGGNotebook*)primitiveNotebook;
 - (void)setPrimitiveNotebook:(EGGNotebook*)value;
+
+- (NSMutableSet*)primitivePhotos;
+- (void)setPrimitivePhotos:(NSMutableSet*)value;
 
 @end

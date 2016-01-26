@@ -1,0 +1,23 @@
+//
+//  bnotes-Prefix.pch
+//  bnotes
+//
+//  Created by Edu González on 25/1/16.
+//  Copyright © 2016 Edu González. All rights reserved.
+//
+
+//
+// Prefix header
+//
+// The contents of this file are implicitly
+// included at the beginning of every source file
+//
+
+#import <Availability.h>
+
+#ifdef __OBJC__
+#import <UIKit/UIKit.h>
+#import <Foundation/Foundation.h>
+
+#import "Settings.h"
+#endif

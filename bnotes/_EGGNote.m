@@ -9,6 +9,7 @@ const struct EGGNoteAttributes EGGNoteAttributes = {
 
 const struct EGGNoteRelationships EGGNoteRelationships = {
 	.notebook = @"notebook",
+	.photos = @"photos",
 };
 
 @implementation EGGNoteID
@@ -43,6 +44,17 @@ const struct EGGNoteRelationships EGGNoteRelationships = {
 @dynamic text;
 
 @dynamic notebook;
+
+@dynamic photos;
+
+- (NSMutableSet*)photosSet {
+	[self willAccessValueForKey:@"photos"];
+
+	NSMutableSet *result = (NSMutableSet*)[self mutableSetValueForKey:@"photos"];
+
+	[self didAccessValueForKey:@"photos"];
+	return result;
+}
 
 @end
 

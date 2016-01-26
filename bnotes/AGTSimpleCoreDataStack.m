@@ -33,8 +33,11 @@
 - (NSManagedObjectContext *)context
 {
     if (_context == nil) {
-        _context = [[NSManagedObjectContext alloc] initWithConcurrencyType:NSPrivateQueueConcurrencyType];
+        _context = [[NSManagedObjectContext alloc] initWithConcurrencyType:NSMainQueueConcurrencyType];
         _context.persistentStoreCoordinator = self.storeCoordinator;
+        
+        //Añadir un Undo Manager para poder deshacer
+        _context.undoManager = [[NSUndoManager alloc]init];
     }
     
     return _context;
