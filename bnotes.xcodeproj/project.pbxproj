@@ -9,8 +9,11 @@
 /* Begin PBXBuildFile section */
 		3419F9DD1C5642E700350021 /* AGTCoreDataTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3419F9DC1C5642E700350021 /* AGTCoreDataTableViewController.m */; };
 		3419F9E21C56434F00350021 /* EGGNotebooksViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3419F9E11C56434F00350021 /* EGGNotebooksViewController.m */; };
+		3449F0E51C5A1085006DA3F3 /* EGGNotebookCellView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3449F0E41C5A1085006DA3F3 /* EGGNotebookCellView.xib */; };
+		3449F0E91C5A12D0006DA3F3 /* EGGNotebookViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3449F0E81C5A12D0006DA3F3 /* EGGNotebookViewCell.m */; };
 		349F59AB1C53742200157917 /* _EGGPhoto.m in Sources */ = {isa = PBXBuildFile; fileRef = 349F59A81C53742200157917 /* _EGGPhoto.m */; };
 		349F59AC1C53742200157917 /* EGGPhoto.m in Sources */ = {isa = PBXBuildFile; fileRef = 349F59AA1C53742200157917 /* EGGPhoto.m */; };
+		34AD92651C57A0350021DC48 /* UIViewController+Navigation.m in Sources */ = {isa = PBXBuildFile; fileRef = 34AD92641C57A0350021DC48 /* UIViewController+Navigation.m */; };
 		34DAF4FE1C50E2FF0046F72C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 34DAF4FD1C50E2FF0046F72C /* main.m */; };
 		34DAF5011C50E2FF0046F72C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 34DAF5001C50E2FF0046F72C /* AppDelegate.m */; };
 		34DAF5041C50E2FF0046F72C /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 34DAF5031C50E2FF0046F72C /* ViewController.m */; };
@@ -53,10 +56,15 @@
 		3419F9DC1C5642E700350021 /* AGTCoreDataTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AGTCoreDataTableViewController.m; sourceTree = "<group>"; };
 		3419F9E01C56434F00350021 /* EGGNotebooksViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EGGNotebooksViewController.h; sourceTree = "<group>"; };
 		3419F9E11C56434F00350021 /* EGGNotebooksViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EGGNotebooksViewController.m; sourceTree = "<group>"; };
+		3449F0E41C5A1085006DA3F3 /* EGGNotebookCellView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EGGNotebookCellView.xib; sourceTree = "<group>"; };
+		3449F0E71C5A12D0006DA3F3 /* EGGNotebookViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EGGNotebookViewCell.h; sourceTree = "<group>"; };
+		3449F0E81C5A12D0006DA3F3 /* EGGNotebookViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EGGNotebookViewCell.m; sourceTree = "<group>"; };
 		349F59A71C53742200157917 /* _EGGPhoto.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = _EGGPhoto.h; sourceTree = "<group>"; };
 		349F59A81C53742200157917 /* _EGGPhoto.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = _EGGPhoto.m; sourceTree = "<group>"; };
 		349F59A91C53742200157917 /* EGGPhoto.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EGGPhoto.h; sourceTree = "<group>"; };
 		349F59AA1C53742200157917 /* EGGPhoto.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EGGPhoto.m; sourceTree = "<group>"; };
+		34AD92631C57A0350021DC48 /* UIViewController+Navigation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+Navigation.h"; sourceTree = "<group>"; };
+		34AD92641C57A0350021DC48 /* UIViewController+Navigation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+Navigation.m"; sourceTree = "<group>"; };
 		34DAF4F91C50E2FF0046F72C /* bnotes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = bnotes.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		34DAF4FD1C50E2FF0046F72C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		34DAF4FF1C50E2FF0046F72C /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -115,6 +123,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		340C6F821C5E3BF600840CEC /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				34DAF5081C50E2FF0046F72C /* Assets.xcassets */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
 		3419F9DE1C5642ED00350021 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
@@ -143,6 +159,27 @@
 			name = "mogenerator Classes";
 			sourceTree = "<group>";
 		};
+		3449F0E61C5A1091006DA3F3 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				34DAF50A1C50E2FF0046F72C /* LaunchScreen.storyboard */,
+				34DAF5051C50E2FF0046F72C /* Main.storyboard */,
+				3449F0E41C5A1085006DA3F3 /* EGGNotebookCellView.xib */,
+				3449F0E71C5A12D0006DA3F3 /* EGGNotebookViewCell.h */,
+				3449F0E81C5A12D0006DA3F3 /* EGGNotebookViewCell.m */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		34AD92621C579FB80021DC48 /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				34AD92631C57A0350021DC48 /* UIViewController+Navigation.h */,
+				34AD92641C57A0350021DC48 /* UIViewController+Navigation.m */,
+			);
+			name = Categories;
+			sourceTree = "<group>";
+		};
 		34DAF4F01C50E2FF0046F72C = {
 			isa = PBXGroup;
 			children = (
@@ -166,13 +203,13 @@
 		34DAF4FB1C50E2FF0046F72C /* bnotes */ = {
 			isa = PBXGroup;
 			children = (
-				3419F9DE1C5642ED00350021 /* Controllers */,
-				34DAF5321C50E32A0046F72C /* Models */,
 				34DAF4FF1C50E2FF0046F72C /* AppDelegate.h */,
 				34DAF5001C50E2FF0046F72C /* AppDelegate.m */,
-				34DAF5051C50E2FF0046F72C /* Main.storyboard */,
-				34DAF5081C50E2FF0046F72C /* Assets.xcassets */,
-				34DAF50A1C50E2FF0046F72C /* LaunchScreen.storyboard */,
+				340C6F821C5E3BF600840CEC /* Resources */,
+				34AD92621C579FB80021DC48 /* Categories */,
+				34DAF5321C50E32A0046F72C /* Models */,
+				3449F0E61C5A1091006DA3F3 /* Views */,
+				3419F9DE1C5642ED00350021 /* Controllers */,
 				34DAF4FC1C50E2FF0046F72C /* Supporting Files */,
 			);
 			path = bnotes;
@@ -332,6 +369,7 @@
 				34DAF50C1C50E2FF0046F72C /* LaunchScreen.storyboard in Resources */,
 				34DAF5091C50E2FF0046F72C /* Assets.xcassets in Resources */,
 				34DAF5071C50E2FF0046F72C /* Main.storyboard in Resources */,
+				3449F0E51C5A1085006DA3F3 /* EGGNotebookCellView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -356,8 +394,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				34AD92651C57A0350021DC48 /* UIViewController+Navigation.m in Sources */,
 				34DAF5041C50E2FF0046F72C /* ViewController.m in Sources */,
 				34DAF5011C50E2FF0046F72C /* AppDelegate.m in Sources */,
+				3449F0E91C5A12D0006DA3F3 /* EGGNotebookViewCell.m in Sources */,
 				3419F9DD1C5642E700350021 /* AGTCoreDataTableViewController.m in Sources */,
 				349F59AB1C53742200157917 /* _EGGPhoto.m in Sources */,
 				34DAF5471C5138890046F72C /* EGGNotebook.m in Sources */,

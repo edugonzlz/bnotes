@@ -179,7 +179,26 @@
 #pragma mark - UndoManager
 -(void)motionEnded:(UIEventSubtype)motion withEvent:(UIEvent *)event{
     if (motion == UIEventSubtypeMotionShake) {
+        
+        UIAlertController *undo = [UIAlertController alertControllerWithTitle:@"Deshacer" message:@"¿Quieres deshacer el último cambio?" preferredStyle:(UIAlertControllerStyleAlert)];
+        
+        UIAlertAction *undoAction = [UIAlertAction actionWithTitle:@"Deshacer" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
         [self.fetchedResultsController.managedObjectContext.undoManager undo];
+        }];
+        UIAlertAction *redoAction = [UIAlertAction actionWithTitle:@"Rehacer" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
+            [self.fetchedResultsController.managedObjectContext.undoManager redo];
+        }];
+        UIAlertAction *cancelAction = [UIAlertAction actionWithTitle:@"Cancelar" style:UIAlertActionStyleCancel handler:^(UIAlertAction * _Nonnull action) {
+            
+        }];
+        
+        [undo addAction:undoAction];
+        [undo addAction:redoAction];
+        [undo addAction:cancelAction];
+        
+        [self presentViewController:undo animated:YES completion:nil];
+        
+        
     }
 }
 @end

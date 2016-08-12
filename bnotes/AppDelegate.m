@@ -11,6 +11,7 @@
 #import "EGGNote.h"
 #import "EGGNotebook.h"
 #import "EGGNotebooksViewController.h"
+#import "UIViewController+Navigation.h"
 
 @interface AppDelegate ()
 
@@ -30,6 +31,7 @@
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     
     NSFetchRequest *request = [NSFetchRequest fetchRequestWithEntityName:[EGGNotebook entityName]];//mogenerator ha creado el metodo de clase entityName
+    
     //Ordenamos la busqueda por fecha de modificacion y nombre
     request.sortDescriptors = @[[NSSortDescriptor sortDescriptorWithKey:EGGNamedEntityAttributes.modificationDate
                                                          ascending:NO],
@@ -46,9 +48,12 @@
     EGGNotebooksViewController *nbVC = [[EGGNotebooksViewController alloc]
                                         initWithFetchedResultsController:results
                                         style:UITableViewStylePlain];
-    UINavigationController *navVC = [[UINavigationController alloc]initWithRootViewController:nbVC];
+
+    //Nos metemos en un navigationController usando la categoria Navigation
+    self.window.rootViewController = [nbVC wrappedInNavigation];
     
-    self.window.rootViewController = navVC;
+    //UINavigationController *navVC = [[UINavigationController alloc]initWithRootViewController:nbVC];
+    //self.window.rootViewController = navVC;
     
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
@@ -112,11 +117,11 @@
     NSArray *results = [self.model.context executeFetchRequest:request
                                                          error:&error];
     //Ejercicio: ejecutar la busqueda con el siguiente metodo
-    //NSArray *results2 = [self executeFetchRequest:request
-    //                               withErrorBlock:&error];
+    NSArray *results2 = [self executeFetchRequest:request
+                                   withErrorBlock:error];
     
     //Ver que nos han devuelto
-    if (results == nil) {
+    if (results2 == nil) {
         NSLog(@"error al buscar %@", results);
     }else{
         NSLog(@"Results %@", results);
@@ -136,13 +141,13 @@
     }];
 }
 
-//-(NSArray *)executeFetchRequest:(NSFetchRequest *)request withErrorBlock:(NSError *)error{
-//    
-//    NSArray *results = [self.model executeRequest:request withError:^(NSError *error) {
-//        NSLog(@"Error al buscar %s \n\n %@", __func__,  error);
-//    }];
-//    return results;
-//}
+-(NSArray *)executeFetchRequest:(NSFetchRequest *)request withErrorBlock:(NSError *)error{
+    
+    NSArray *results = [self.model executeRequest:request withError:^(NSError *error) {
+        NSLog(@"Error al buscar %s \n\n %@", __func__,  error);
+    }];
+    return results;
+}
 
 
 -(void)autoSave{

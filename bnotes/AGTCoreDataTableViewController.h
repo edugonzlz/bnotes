@@ -17,27 +17,14 @@
 //  create a NEW NSFetchedResultsController and set this class's fetchedResultsController @property again.
 //
 
-
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 #import <CoreData/CoreData.h>
+
 @interface AGTCoreDataTableViewController : UITableViewController <NSFetchedResultsControllerDelegate>
-
-
-
-
 
 // The controller (this class fetches nothing if this is not set).
 @property (strong, nonatomic) NSFetchedResultsController *fetchedResultsController;
-
-// Causes the fetchedResultsController to refetch the data.
-// You almost certainly never need to call this.
-// The NSFetchedResultsController class observes the context
-//  (so if the objects in the context change, you do not need to call performFetch
-//   since the NSFetchedResultsController will notice and update the table automatically).
-// This will also automatically be called if you change the fetchedResultsController @property.
-- (void)performFetch;
-
 // Turn this on before making any changes in the managed object context that
 //  are a one-for-one result of the user manipulating rows directly in the table view.
 // Such changes cause the context to report them (after a brief delay),
@@ -56,6 +43,13 @@
 // Set to YES to get some debugging output in the console.
 @property BOOL debug;
 
+// Causes the fetchedResultsController to refetch the data.
+// You almost certainly never need to call this.
+// The NSFetchedResultsController class observes the context
+//  (so if the objects in the context change, you do not need to call performFetch
+//   since the NSFetchedResultsController will notice and update the table automatically).
+// This will also automatically be called if you change the fetchedResultsController @property.
+- (void)performFetch;
 
 -(id) initWithFetchedResultsController: (NSFetchedResultsController *) aFetchedResultsController
                                  style: (UITableViewStyle) aStyle;

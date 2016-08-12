@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9531" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="66" id="DPh-Sc-bDf" customClass="EGGNotebookViewCell">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="66"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="DPh-Sc-bDf" id="LaK-1Y-LSy">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="66"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="44" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pEo-l8-4Ij">
+                        <rect key="frame" x="255" y="0.0" width="66" height="66"/>
+                        <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="66" id="GDu-KF-hbC"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" name="HelveticaNeue-UltraLight" family="Helvetica Neue" pointSize="30"/>
+                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nombre de la Libreta de notas" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Iry-Dc-SUh">
+                        <rect key="frame" x="16" y="0.0" width="231" height="66"/>
+                        <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="20"/>
+                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="pEo-l8-4Ij" firstAttribute="top" secondItem="Iry-Dc-SUh" secondAttribute="top" id="3wB-Rq-0Jm"/>
+                    <constraint firstItem="pEo-l8-4Ij" firstAttribute="leading" secondItem="Iry-Dc-SUh" secondAttribute="trailing" constant="8" symbolic="YES" id="A38-5n-30E"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="pEo-l8-4Ij" secondAttribute="trailing" constant="-9" id="JNh-DA-jb3"/>
+                    <constraint firstItem="Iry-Dc-SUh" firstAttribute="leading" secondItem="LaK-1Y-LSy" secondAttribute="leadingMargin" constant="8" id="LRc-2J-ftp"/>
+                    <constraint firstItem="Iry-Dc-SUh" firstAttribute="centerY" secondItem="LaK-1Y-LSy" secondAttribute="centerY" id="kQk-dT-Nfw"/>
+                    <constraint firstItem="Iry-Dc-SUh" firstAttribute="top" secondItem="LaK-1Y-LSy" secondAttribute="top" id="u13-Ni-JVb"/>
+                    <constraint firstItem="pEo-l8-4Ij" firstAttribute="bottom" secondItem="Iry-Dc-SUh" secondAttribute="bottom" id="vz3-GW-aoX"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="nameView" destination="Iry-Dc-SUh" id="7fX-Gj-Mdp"/>
+                <outlet property="numberOfNotesView" destination="pEo-l8-4Ij" id="PiO-to-nrM"/>
+            </connections>
+            <point key="canvasLocation" x="224" y="134"/>
+        </tableViewCell>
+    </objects>
+</document>

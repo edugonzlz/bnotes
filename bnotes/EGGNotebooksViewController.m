@@ -8,6 +8,10 @@
 
 #import "EGGNotebooksViewController.h"
 #import "EGGNotebook.h"
+#import "EGGNotebookViewCell.h"
+
+//constante definida solo para mostrar como registrar una celda personalizada de otra forma alternativa
+#define CUSTOM_CELL_ID_1 @"CustomCellId1"
 
 @interface EGGNotebooksViewController ()
 
@@ -45,6 +49,17 @@
                  object:nil];
         
     }
+    
+    //Registramos el nib de la celda
+    UINib *cellNib = [UINib nibWithNibName:@"EGGNotebookCellView"
+                                    bundle:nil];
+    [self.tableView registerNib:cellNib
+         forCellReuseIdentifier:[EGGNotebookViewCell cellID]];
+    
+    //Tambien se puede registrar asi
+//    [self.tableView registerClass:[EGGNotebookViewCell class]
+//           forCellReuseIdentifier:CUSTOM_CELL_ID_1];
+
 
 }
 //Damos de baja la notificacion
@@ -72,7 +87,7 @@ commitEditingStyle:(UITableViewCellEditingStyle)editingStyle
 forRowAtIndexPath:(NSIndexPath *)indexPath{
     
     if (editingStyle == UITableViewCellEditingStyleDelete) {
-        //avergiguamos la celda
+        //averiguamos la celda
         EGGNotebook *deleteNotebook = [self.fetchedResultsController objectAtIndexPath:indexPath];
         
         //la borramos del modelo
@@ -85,29 +100,40 @@ forRowAtIndexPath:(NSIndexPath *)indexPath{
     //Cual es la notebook
     EGGNotebook *notebook = [self.fetchedResultsController objectAtIndexPath:indexPath];
     
-    //Creamos una celda
-    static NSString *cellId = @"cellId";
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellId];
-    if (cell == nil) {
-        cell = [[UITableViewCell alloc]initWithStyle:UITableViewCellStyleSubtitle
-                                     reuseIdentifier:cellId];
-    }
+//    //Creamos una celda
+//    static NSString *cellId = @"cellId";
+//    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellId];
+//    if (cell == nil) {
+//        cell = [[UITableViewCell alloc]initWithStyle:UITableViewCellStyleSubtitle
+//                                     reuseIdentifier:cellId];
+//    }
+//    
+//    //Sincronizamos la notebook con la vista, con la celda
+//    cell.textLabel.text = notebook.name;
+//    NSDateFormatter *formater = [[NSDateFormatter alloc]init];
+//    formater.dateStyle = NSDateFormatterMediumStyle;
+//    cell.detailTextLabel.text = [formater stringFromDate:notebook.modificationDate];
     
-    //Sincronizamos la notebook con la vista, con la celda
-    cell.textLabel.text = notebook.name;
-    NSDateFormatter *formater = [[NSDateFormatter alloc]init];
-    formater.dateStyle = NSDateFormatterMediumStyle;
-    cell.detailTextLabel.text = [formater stringFromDate:notebook.modificationDate];
+    //Creamos la celda
+    EGGNotebookViewCell *cell = [tableView dequeueReusableCellWithIdentifier:[EGGNotebookViewCell cellID]];
+    
+    //Sincronizamos con la vista
+    cell.nameView.text = notebook.name;
+    cell.numberOfNotesView.text = [NSString stringWithFormat:@"%lu", (unsigned long)notebook.notes.count];
     
     //Devolvemos la celda
     return cell;
+}
+
+#pragma mark - TableView Delegate
+-(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
+    return [EGGNotebookViewCell cellHeight];
 }
 
 #pragma mark - Proximity Sensor
 -(BOOL)hasProximitySensor{
     
     UIDevice *device = [UIDevice currentDevice];
-    
     
     BOOL oldValue = [device isProximityMonitoringEnabled];
     [device setProximityMonitoringEnabled:!oldValue];
@@ -121,8 +147,8 @@ forRowAtIndexPath:(NSIndexPath *)indexPath{
 //UIDeviceProximityStateDidChangeNotification
 -(void)proximityStateDidChange:(NSNotification *)notification{
     
+    //Como ejemplo realizamos un undo
     [self.fetchedResultsController.managedObjectContext.undoManager undo];
-    
     
 }
 
